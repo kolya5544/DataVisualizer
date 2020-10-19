@@ -46,7 +46,7 @@ namespace DataVisualization
                 int Y = i / Res;
                 int X = i % Res;
 
-                byte b = bytes[i*StepSize+Bias];
+                byte b = bytes[(i*StepSize)+Bias];
 
                 int RGB = ColorHLSToRGB(Math.Min(b, (byte)240), 120, 240);
                 Color c = Color.FromArgb((RGB >> 0) & 0xff, (RGB >> 8) & 0xff, (RGB >> 16) & 0xff);
